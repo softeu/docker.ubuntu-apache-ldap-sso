@@ -1,5 +1,6 @@
 FROM ubuntu:14.04
 
+
 RUN echo "1.565.1" > .lts-version-number
 
 RUN apt-get update && apt-get install -y wget git curl zip vim
@@ -31,7 +32,7 @@ ENV SERVER_NAME docker-apache-ldap-sso
 EXPOSE 80
 
 WORKDIR /var/www/html
-
+MAINTAINER Jindrich Vimr <jvimr@softeu.com>
 
 CMD ["/var/www/run_apache.sh"]
 
